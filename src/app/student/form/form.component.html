@@ -1,0 +1,32 @@
+<h1>Hello this is form from student component</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-4 offset-4">
+            <form [formGroup]="loginform" class="form">
+                <h1 class="heading1">Login Form</h1>
+                <div class="mt-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input formControlName="name" type="text" class="form-control" placeholder="Enter your Name">
+                    <div **ngIf="
+                    formvaluecontrol('name').invalia && (formvaluecontrol('name').dirty || formvaluecontrol('name').touched)
+                    
+                    " class="mt-2 text-warning">
+                    <div **ngIf="formvaluecontrol('name').error?.['Required']">Name is Required</div>
+
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="Email" class="form-label">Email</label>
+                    <input formControlName="password" type="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <div class="mt-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input formControlName="password" type="password" class="form-control" placeholder="Enter your Password">
+                </div>
+                <div class="mt-2">
+                    <button   type="submit">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
